@@ -1,65 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="image" property="og:image" content="http://dev.marleighmorgan.com/thumbnails/tipcalc.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Tip Calculator</title>
-</head>
-
-<body>
-    <section class="container">
-        <h3>Tip Calculator</h3>
-        <form action="#" method="POST" id="tipCalc">
-            <label for="checkAmount">Check Amount:
-            <input aria-label="check amount" name="checkAmount" type="number" placeholder="$0.00" step="0.01"
-                min="1" class="check-style" required>
-            </label>    
-            <label for="tip15" class="label-container">
-                <input type="radio" name="tipAmount" id="tip15" value="15">
-                <span class="checkmark"></span>
-                15%
-            </label>
-            
-            <label for="tip18" class="label-container">
-                <input type="radio" name="tipAmount" id="tip18" value="18">
-                <span class="checkmark"></span>
-                18%
-            </label>            
-
-            <label for="tip20" class="label-container">
-                <input type="radio" name="tipAmount" id="tip20" value="20">
-                <span class="checkmark"></span>
-                20%
-            </label>
-            
-            <label for="custom-tip" class="label-container">
-                <input type="radio" name="tipAmount" id="custom-tip" value="0">
-                <span class="checkmark"></span>
-                Custom</label>
-
-            <div class="hide custom">
-                <label for="customAmount">Tip %:</label>
-                <input type="number" name="customTip" placeholder="Custom Tip %" min="1" id="customAmount">
-            </div>
-            <button class="btn" id="submitBtn">Submit</button>
-            <button class="btn hide" id="resetBtn">Reset</button>
-        </form>
-
-        <div class="results hide">
-
-        </div>
-
-
-
-
-    </section>
-    <script src="script.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
