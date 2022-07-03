@@ -3,7 +3,7 @@ import {StyledHeader} from "./header-styles";
 const Header:React.FC = () => {
     return (
         <StyledHeader>
-            header go here
+           Tip Calculator
         </StyledHeader>
     )
 }
