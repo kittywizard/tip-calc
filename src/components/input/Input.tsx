@@ -1,11 +1,14 @@
 import { StyledInput } from "./input-styles";
 
-const Input:React.FC = () => {
+interface iProps {
+    type: string,
+    placeholder: string
+}
+
+const Input:React.FC<iProps> = ({type, placeholder}) => {
     return (
         <>
-            <StyledInput>
-                
-            </StyledInput>
+            <StyledInput type={type} placeholder={placeholder}/>
         </>
     )
 }
