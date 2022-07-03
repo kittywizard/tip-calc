@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Header from "./components/header/Header";
+import {StyledApp} from "./styles/container";
 
-function App() {
+const App:React.FC = () => {
 
   return (
-    <div className="App">
-     testing yet again. did i break it?
-    </div>
+    <StyledApp>
+      <Header/>
+      other stuff 
+   </StyledApp>
   )
 }
 
