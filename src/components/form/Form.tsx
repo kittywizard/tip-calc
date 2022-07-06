@@ -4,8 +4,14 @@ import Input from "../input/Input";
 import Button from "../button/Button";
 
 const Form:React.FC = () => {
+
+    function handleSubmit(event: any) {
+        event.preventDefault();
+        console.log(event);
+    }
+    
     return (
-        <StyledForm>
+        <StyledForm onSubmit={e => handleSubmit(e)}>
             <Label name='Amount'/>
             <Input 
                 type="number"
