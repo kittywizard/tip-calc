@@ -6,10 +6,17 @@ interface iProps {
     name: string
 }
 
-const Input:React.FC<iProps> = ({type, placeholder}) => {
+const Input:React.FC<iProps> = ({type, placeholder, name}) => {
     return (
         <>
-            <StyledInput type={type} placeholder={placeholder}/>
+            <StyledInput 
+                type={type} 
+                placeholder={placeholder}
+                name={name}
+                value={}
+                onChange={event => handleChange(event)}
+
+            />
         </>
     )
 }

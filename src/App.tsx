@@ -18,7 +18,10 @@ const [formState, setFormState] = useState<iState>({
   return (
     <StyledApp>
       <Header/>
-      <Form />
+      <Form 
+        formState={formState}
+        setFormState={setFormState}
+      />
    </StyledApp>
   )
 }

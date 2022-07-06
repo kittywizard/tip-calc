@@ -3,7 +3,16 @@ import Label from "../label/Label";
 import Input from "../input/Input";
 import Button from "../button/Button";
 
-const Form:React.FC = () => {
+interface iFormProps {
+    formState: {
+        tipAmount: number,
+        checkAmount: number
+    },
+
+    setFormState: any
+}
+
+const Form:React.FC<iFormProps> = ({formState, setFormState}) => {
 
     function handleSubmit(event: any) {
         event.preventDefault();
