@@ -1,27 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Header from "./components/header/Header";
 import {StyledApp} from "./styles/container";
 import Form from "./components/form/Form";
+import Results from "./components/results/Results"
 
-interface iState {
-  checkAmount: number,
-  tipAmount: number
+interface AppState {
+  displayResults: boolean
 }
 
 const App:React.FC = () => {
 
-const [formState, setFormState] = useState<iState>({
-  checkAmount: 0,
-  tipAmount: 0
-});
+  const [displayResults, setDisplayResults] = useState<AppState["displayResults"]>(false);
 
   return (
     <StyledApp>
       <Header/>
-      <Form 
-        formState={formState}
-        setFormState={setFormState}
-      />
+      {
+        !displayResults ?
+        <Form 
+          setDisplayResults={setDisplayResults}
+        /> :
+        <div>Success</div>
+      }
    </StyledApp>
   )
 }
