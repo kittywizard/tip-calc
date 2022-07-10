@@ -9,7 +9,7 @@ const App:React.FC = () => {
 
   //const {displayResults, setDisplayResults} = useContext(Context);
   const [displayResults, setDisplayResults] = useState(false);
-  
+
   return (
         <StyledApp>
               <Header/>
@@ -18,7 +18,7 @@ const App:React.FC = () => {
                 <Form 
                   setDisplayResults={setDisplayResults}
                 /> :
-                <div>Success</div>
+                <Results/>
               }
           </StyledApp>    
   )
