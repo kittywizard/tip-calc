@@ -11,10 +11,17 @@ interface iState {
   }
 
   interface FormProps {
-    setDisplayResults: (prevState: boolean) => void
+    setDisplayResults: (prevState: boolean) => void,
+    resultsInfo : {
+        tipPercentage: number,
+        checkAmount: number,
+        totalTipAmount: number,
+        totalAmount: number
+    },
+    setResultsInfo: any
   }
 
-const Form:React.FC<FormProps> = ({setDisplayResults}) => {
+const Form:React.FC<FormProps> = ({setDisplayResults, resultsInfo, setResultsInfo}) => {
 
     const [formState, setFormState] = useState<iState>({
         checkAmount: NaN,
@@ -37,11 +44,21 @@ const Form:React.FC<FormProps> = ({setDisplayResults}) => {
     function handleSubmit(event: any) {
         event.preventDefault();
         setDisplayResults((prevState: boolean) => !prevState);
-        const tipPercentage: number = formState.tipAmount / 100;
 
-        const newTotal: number = formState.checkAmount * tipPercentage;
-        //toFixed the number
-        console.log(newTotal);
+
+        const tipPercentage: number = parseFloat((formState.tipAmount / 100).toFixed(2));
+
+        const newTipTotal: number = parseFloat((formState.checkAmount * tipPercentage).toFixed(2));
+        const totalCheckAmount : number = parseFloat((parseFloat(formState.checkAmount) + parseFloat(newTipTotal)).toFixed(2));
+
+        setResultsInfo(() => (
+            {
+                tipPercentage: tipPercentage,
+                checkAmount: formState.checkAmount,
+                totalTipAmount: newTipTotal,
+                totalAmount: totalCheckAmount
+            }
+        ))
     }
     
     return (

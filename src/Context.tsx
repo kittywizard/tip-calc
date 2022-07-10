@@ -1,8 +1,8 @@
-import { Context, createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 interface ContextState {
     displayResults: boolean,
-    setDisplayResults?: (prevState: boolean) => boolean,
+    setDisplayResults?: (prevState: boolean) => void,
 }
 
 const defaultState = {
