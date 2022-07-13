@@ -1,12 +1,13 @@
 import { StyledButton } from "./styled-button";
 
 interface iButtonProps {
-    name: string
+    name: string,
+    onClick?: any
 }
 
-const Button:React.FC<iButtonProps> = ({name}) => {
+const Button:React.FC<iButtonProps> = ({name, onClick}) => {
     return (
-        <StyledButton>
+        <StyledButton onClick={onClick}>
            {name} 
         </StyledButton>
     )

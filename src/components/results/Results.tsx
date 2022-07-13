@@ -1,4 +1,6 @@
-import { StyledResults } from "./styled-results";
+import { StyledResults, StyledResultsSpan } from "./styled-results";
+import Button from "../button/Button";
+
 
 interface iResultsState {
     resultsInfo: {
@@ -15,10 +17,18 @@ const Results:React.FC<iResultsState> = ({resultsInfo}) => {
 
     return (
         <StyledResults>
-            Check Amount: ${checkAmount} <br/>
-            Tip Amount: ${totalTipAmount} <br/>
+            Check Amount: 
+            <StyledResultsSpan>${checkAmount}</StyledResultsSpan>
+            Tip Amount: 
+            <StyledResultsSpan>${totalTipAmount}</StyledResultsSpan>
 
-            Total: ${totalAmount}
+            Total: 
+            <StyledResultsSpan>${totalAmount}</StyledResultsSpan>
+
+        <Button 
+            name="Calculate Again"
+            onClick={() => console.log('refresh me')}
+        />
         </StyledResults>
     )
 }
