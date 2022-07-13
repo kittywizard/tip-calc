@@ -21,6 +21,7 @@ const Input:React.FC<iProps> = ({type, placeholder, name, value, handleChange, i
                 onChange={event => handleChange(event)}
                 ref={inputRef}
                 autoFocus={inputRef.current === document.activeElement}
+                required
             />
         </>
     )
