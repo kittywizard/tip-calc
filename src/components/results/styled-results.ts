@@ -4,6 +4,8 @@ export const StyledResults = styled.div`
     font-size: 2rem;
     display: flex;
     flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
 
 `;
 
@@ -11,3 +13,4 @@ export const StyledResultsSpan = styled.span`
     font-weight: 700;
     color: #5533df;
 `;
+

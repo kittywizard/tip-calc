@@ -8,5 +8,5 @@ export const StyledButton = styled.button`
     font-size: 1.125rem;
     font-weight: bold;
     cursor: pointer;
-    background-color: aliceblue;
+    background-color: #12ffcc;
 `;
