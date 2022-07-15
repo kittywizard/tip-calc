@@ -14,20 +14,21 @@ interface iResultsState {
 
 const Results:React.FC<iResultsState> = ({resultsInfo}) => {
     const {tipPercentage, checkAmount, totalTipAmount, totalAmount} = resultsInfo;
+    let tipDisplayPercent: number = tipPercentage * 100;
 
     return (
         <StyledResults>
             Check Amount: 
             <StyledResultsSpan>${checkAmount}</StyledResultsSpan>
             Tip Amount: 
-            <StyledResultsSpan>${totalTipAmount}</StyledResultsSpan>
+            <StyledResultsSpan>${totalTipAmount} ({tipDisplayPercent}%)</StyledResultsSpan>
 
             Total: 
             <StyledResultsSpan>${totalAmount}</StyledResultsSpan>
 
         <Button 
             name="Calculate Again"
-            onClick={() => console.log('refresh me')}
+            onClick={() => location.reload()}
         />
         </StyledResults>
     )
