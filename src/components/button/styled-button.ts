@@ -8,5 +8,11 @@ export const StyledButton = styled.button`
     font-size: 1.125rem;
     font-weight: bold;
     cursor: pointer;
-    background-color: #489ec8;
+    background: rgba(16,96,135,.8);
+    transition: background 1s ease-in-out;
+
+    :hover,
+    :focus {
+        background: rgba(72,158,200,1);
+    }
 `;
