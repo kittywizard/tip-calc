@@ -50,8 +50,6 @@ const Form:React.FC<FormProps> = ({setDisplayResults, resultsInfo, setResultsInf
 
         const newTipTotal: number = parseFloat((formState.checkAmount * tipPercentage).toFixed(2));
         const totalCheckAmount : number = parseFloat((parseFloat(formState.checkAmount) + parseFloat(newTipTotal)).toFixed(2));
-       //const totalCheckAmount : number = parseFloat((formState.checkAmount + newTipTotal).toFixed(2));
-       console.log(formState.checkAmount + newTipTotal)
 
         setResultsInfo(() => (
             {
@@ -74,7 +72,7 @@ const Form:React.FC<FormProps> = ({setDisplayResults, resultsInfo, setResultsInf
                 handleChange={handleFormChange}
                 inputRef={inputCheckRef}
             />
-            <Label name="Tip Amount"/>
+            <Label name="Tip Percentage"/>
             <Input 
                 type="number"
                 name="tipAmount"
