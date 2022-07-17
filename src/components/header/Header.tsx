@@ -8,7 +8,7 @@ const Header:React.FC = () => {
             </h1>
 
             <p>
-                Calculate blah blah
+                Enter the amount of the check and the tip percentage as a whole number (18, 20, etc)
             </p>
         </StyledHeader>
     )

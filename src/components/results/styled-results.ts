@@ -10,7 +10,7 @@ export const StyledResults = styled.div`
 
 export const StyledResultsSpan = styled.span`
     font-weight: 700;
-    color: #5533df;
+    color:  #0962f7;
     padding: 0 0 1em 0;
 `;
 

@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
 
     h1 {
         font-weight: 700;
-        color: #5533df;
+        color: #0962f7;
         font-size: 2rem;
         margin: 0;
     }
